@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>
+windring[LAST-20150529]
+</title>
+<script>
+var au_tick=2;
+var iniofp=1;
+var path="http://7sbxv9.com1.z0.glb.clouddn.com/";//伟大的七牛的前缀
+var mstring="http://7sbxv9.com1.z0.glb.clouddn.com/1.midi";
+window.onload=oncl1;
+function oncl1()
+{	
+  if(iniofp==0)
+    {
+      document.getElementById("l1").innerHTML=">";
+	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
+	  iniofp=1;
+	}else{
+      document.getElementById("l1").innerHTML="II";
+	  MIDIjs.play(mstring);
+	  iniofp=0;
+	}
+}function nextm(){
+  if(au_tick<=4)
+	{	
+	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
+	  mstring=path+(au_tick++)+".midi";
+	  MIDIjs.play(mstring);
+	}else{
+      alert("full");
+	  au_tick=1;
+	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
+	  mstring=path+(au_tick++)+".midi";
+	  MIDIjs.play(mstring);
+	}
+}function backm(){
+  if(au_tick>1)
+	{	
+	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
+	  mstring=path+(au_tick--)+".midi";
+	  MIDIjs.play(mstring);
+	}else{
+	  alert("full");
+	  au_tick=4;
+	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
+	  mstring=path+(au_tick--)+".midi";
+	  MIDIjs.play(mstring);
+	}
+}
+//一些ui设计
+function conft(){
+  var confta=document. getElementById("tagmsg");
+  if(confta.style.right=="0px")
+  {
+    confta.style.right="-100%";
+  }else{
+    confta.style.right="0px";
+  }
+}function closethis(){
+  this.style.display="none";
+}
+//over
+</script>
+<style>
+html,body{
+margin:0px;
+padding:0px;
+width:100%;
+height:100%;
+position:relative;
+font-size:10px;
+background:#efefff;
+}
+#bar{
+width:100%;
+height:50px;
+background:#66ccff;
+position:fixed;
+bottom:0px;
+}
+#cot{
+width:100px;
+height:100px;
+line-height:100px;
+font-size:100px;
+text-algin:center;
+position:absolute;
+left:0px;
+top:0px;
+float:left;
+padding-left:100px;
+padding-right:100px;
+padding-top:50px;
+padding-bottom:50px;
+}
+#mplay{
+	padding-left:30px;
+    padding-right:30px;
+    margin:0px;
+	width:200px;
+	height:80px;
+	background:#66ccff;
+	border:20px solid #99ccff;
+	}#mplay p,#mplay l{
+	float:left;
+	display:block;
+	width:50px;
+    height:50px;
+    line-height:50px;
+    color:#fff;
+    line-weight:120px;
+    margin-left:0px;
+    margin-right:0px;
+    border-radius:50px;
+    text-align:center;
+    background:#99ccff;
+    border:5px solid #99ddff;	
+}
+#mplay l:hover,#mplay p:hover{
+	background:#99eeff;
+}
+#mplay l{
+	width:70px;
+	height:70px;
+	border-radius:70px;
+	line-height:70px;
+}
+#tagmsg{
+width:auto;
+height:auto;
+position:fixed;
+right:0px;
+bottom:50px;
+transition: right 5s; 
+-moz-transition:right 5s;
+-webkit-transition:right 5s;
+-o-transition:right 5s; 
+box-shadow:10px 10px 10px 10px #66ccff;
+float:right;
+font-size:16px;
+font-weight:900;
+}
+.tagmsgs{
+width:auto;
+height:auto;
+margin:10px;
+box-shadow:0px 0px 8px 5px #66ccff;
+float:right;
+clear:both;
+font-size:16px;
+font-weight:900;
+}
+#warning{
+background:#fff;
+float:right;
+}
+.bara{
+line-height:10px;float:right;display:block;width:100px;height:30px;padding:5px;background:#3592DD;border:#4CC2FF 5px solid;text-align:center;color:white;text-decoration:none;font-weight:25px;
+}
+</style>
+</head>
+<body>
+<div style="position:fixed;box-shadow: 10px 10px 5px #888888;width:300px;top:50%;margin-top:-200px;left:50%;margin-left:-150px;">
+
+<!--big logo start-->
+<svg version="1.1" height="200" width="300" style="margin:0px;padding:0px;">
+<rect x="0" y="0" width="300" height="200" rx="0" ry="0"
+style="fill:#66ccff;stroke:pink;stroke-width:0;
+fill-opacity:1.0;stroke-opacity:0.9"/>
+<polygon points="50,0 250,0 250,200 50,200" style="fill:#5cf; stroke:#000000;stroke-width:4"/>
+<polygon points="150,200 50,27 250,27" style="fill:#5cf; stroke:#000000;stroke-width:4; fill-opacity:0.5;stroke-opacity:0.5
+"/>
+<polygon points="150,0 50,173 250,173" style="fill:#5cf; stroke:#000000;stroke-width:4; fill-opacity:0.5;stroke-opacity:0.5;
+"/>
+</svg>
+<!--over-->
+<!--the font-->
+<div id="cot">
+靈
+</div>
+<!--over-->
+<!--控件-->
+<div id="mplay">
+<p onclick="backm()">
+&lt;&lt;
+</p>
+<l onClick="oncl1()" id="l1">
+II
+</l>
+<p onclick="nextm()">
+>>
+</p>
+</div>
+
+</div>
+
+<!--over-->
+<!--words-->
+<div>
+<div class="tagmsgs" id="warning" >
+--Ⅻ:默--
+</div>
+
+<div class="tagmsgs" onclick="this.style.display='none'">
+--Ⅶ:show or not--
+</div>
+
+
+<div class="tagmsgs" onclick="this.style.display='none'" style="background:#ddf;float:left;">
+--选曲(或有迷雾)--
+</div>
+<div class="tagmsgs" onclick="this.style.display='none'" style="float:left;">
+--:花の映る塚--
+</div>
+<div class="tagmsgs" onclick="this.style.display='none'" style="float:left;">
+--:もう歌しか聞こえない--
+</div>
+<div class="tagmsgs" onclick="this.style.display='none'" style="float:left;">
+--:フラワリングナイト--
+</div>
+<div class="tagmsgs" onclick="this.style.display='none'" style="float:left;">
+--:オリエンタルダークフライト--
+</div>
+
+<div class="tagmsgs" onclick="this.style.display='none'">
+--EAs骑士团参见1+1公主殿下--
+</div>
+<div id="tagmsg">
+==⑨welcome.tips:来晚了抱歉==
+</div>
+</div>
+<!--over-->
+<div id="bar">
+<!--logos-->
+<svg version="1.1" height="50" width="60">
+
+<rect x="10" y="0" width="50" height="50" rx="0" ry="0"
+style="fill:#66ccff;stroke:pink;stroke-width:0;
+fill-opacity:1.0;stroke-opacity:0.9"/>
+
+<line x1="10" y1="15" x2="60" y2="15"
+style="stroke:#9ADDFF;stroke-width:10"/>
+
+<line x1="10" y1="35" x2="60" y2="35"
+style="stroke:#fff;stroke-width:10"/>
+
+</svg>
+<!--over-->
+
+<a class="bara" href="#" style="" onclick="conft()">
+<br />
+TAGMSG<br />
+</br>
+</a>
+
+<a class="bara" href="http://heru.sinaapp.com" style="">
+<br />
+blog<br />
+</br>
+</a>
+
+</div>
+<!--伟大的midi-->
+<script type='text/javascript' src='http://www.midijs.net/lib/midi.js'></script>
+</body>
+</html>
