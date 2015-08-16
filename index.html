@@ -164,6 +164,7 @@ line-height:10px;float:right;display:block;width:100px;height:30px;padding:5px;b
 </style>
 </head>
 <body>
+<div id="bet1" style="width:100%;height:100%;margin:0px;padding:0px;">
 <div style="position:fixed;box-shadow: 10px 10px 5px #888888;width:300px;top:50%;margin-top:-200px;left:50%;margin-left:-150px;">
 
 <!--big logo start-->
@@ -205,7 +206,7 @@ II
 --+++Ⅻ:EAs骑士团参见公主殿下+++--
 </div>
 
-<div class="tagmsgs" onclick="this.style.display='none'">
+<div class="tagmsgs">
 --Ⅶ:此次更新历时一个月+++++--<br>
 --主要是在写暑假作业++++++++--<br>
 --最后还是来不及++++++++++++--<br>
@@ -231,11 +232,16 @@ II
 
 
 
+
+
 <div id="tagmsg">
 ==⑨welcome.tips:来晚了抱歉==
 </div>
 </div>
 <!--over-->
+
+</div><!--bet1 over-->
+
 <div id="bar">
 <!--logos-->
 <svg version="1.1" height="50" width="60">
@@ -266,12 +272,12 @@ blog<br />
 </a>
 
 <a class="bara" href="#" style="" onclick="$('#ppl').fadeToggle(500);">
-<div id="ppl" style="position:relative;left:-95px;top:-210px;width:200px;height:200px;background:#000;opacity:0.5;display:none;margin-bottom:-200px;">
+<div id="ppl" style="position:relative;left:-95px;top:-210px;width:200px;height:200px;background:#000;opacity:0.7;display:none;margin-bottom:-200px;">
   <div id="ch1"
        style="width:100px;height:100px;background:#6cf;float:left;text-algin:center;" 
-	   onmouseover="$('#ch1').fadeToggle(100).fadeToggle(100)"
+	   onmouseover="$('#ch1').fadeToggle(200).fadeToggle(100)"
 	   onclick="window.open('http://sandbox.runjs.cn/show/f0vpx4cq')">
-    <div style="width:80px;height:10px;margin:45px 10px 45px 10px;line-height:10px;">
+    <div style="width:80px;height:10px;margin:45px 10px 45px 10px;line-height:10px;color:#930;">
 	弹球君
 	</div>
   </div>
@@ -279,19 +285,64 @@ blog<br />
   <div id="ch3" style="width:100px;height:100px;float:left;"></div>
   <div id="ch4" 
        style="width:100px;height:100px;background:#f36;float:left;" 
-	   onmouseover="$('#ch4').fadeToggle(100).fadeToggle(100)"
+	   onmouseover="$('#ch4').fadeToggle(200).fadeToggle(100)"
 	   onclick="window.open('http://sandbox.runjs.cn/show/pktpzfaw')"
 	   >
-	<div style="width:80px;height:10px;margin:45px 10px 45px 10px;line-height:10px;">
+	<div style="width:80px;height:10px;margin:45px 10px 45px 10px;line-height:10px;color:#11ffff;">
 	数据君
 	</div>
   </div>
 </div>
-<div id="pp11" style="width:80px;height:10px;line-height:10px;padding:10px;">小东西</div>
+<div id="pp11" style="width:80px;height:10px;line-height:10px;padding:10px;position:absolute;right:250px;top:10px;">小东西</div>
+</a>
+
+<a class="bara" href="#" style="position:static;">
+  <div id="mapp" style="display:none;width:400px;height:200px;opacity:1.0;background:#000;position:relative;left:-10px;top:-210px;">
+    <div id="mapp1" style="width:100px;height:100px;float:left;background:#6cf;">
+	  <div style="color:#993300;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#66CCFF</div>
+	</div>
+	<div id="mapp2" style="width:100px;height:100px;float:left;background:#e00;">
+	  <div style="color:#1ff;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#EE0000</div>
+	</div>
+	<div id="mapp2" style="width:100px;height:100px;float:left;background:#6fc;">
+	  <div style="color:#903;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#66FFCC</div>
+	</div>
+	<div id="mapp2" style="width:100px;height:100px;float:left;background:#8eccc9;">
+	  <div style="color:#713336;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#8ECCC9</div>
+	</div>
+	<div id="mapp2" style="width:100px;height:100px;float:left;background:#ff9;">
+	  <div style="color:#006;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#FFFF99</div>
+	</div>
+	<div style="width:300px;height:100px;background:#fff;opacity:0.5;float:left;">
+	  <input type="text" id="in1" style="clean:both;border:1px #000 solid;float:left;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;" value="66"></input>
+	  <input type="text" id="out1" style="clean:both;border:1px #000 solid;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;float:right;" value="输出III"></input>
+	  <input type="text" id="in2" style="clean:both;border:1px #000 solid;float:left;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;" value="CC"></input>
+	  <input type="text" id="out2" style="clean:both;border:1px #000 solid;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;float:right;" value="输出II"></input>
+	  <input type="text" id="in3" style="clean:both;border:1px #000 solid;float:left;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;" value="FF"></input>
+	  <input type="text" id="out3" style="clean:both;border:1px #000 solid;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;float:right;" value="输出I"></input>
+	  <button id="outall"
+	          onclick="$('#out1').val((255-parseInt($('#in1').val(),16)).toString(16));
+	                   $('#out2').val((255-parseInt($('#in2').val(),16)).toString(16));
+					   $('#out3').val((255-parseInt($('#in3').val(),16)).toString(16));
+					   $('#outall').text('#'+$('#out1').val().toString()+$('#out2').val().toString()+$('#out3').val().toString());
+					   "
+		      style="width:150px;height:20px;padding:0px;margin:0px;">
+			  launch
+	  </button>
+	  <br><span style="font-size:10px;color:#000;">--反色器--提示：一位数的请自行添加0。</span>
+	</div>
+  </div>
+<div style="width:100px;height:10px;padding:10px 0px 10px 0px;text-algin:center;position:absolute;right:370px;top:10px;"
+     onclick="$('#mapp').fadeToggle();"
+	 >
+颜色仓库
+</div>
 </a>
 
 </div>
 <!--伟大的midi-->
 <script type='text/javascript' src='http://www.midijs.net/lib/midi.js'></script>
+<div id="bet2" style="width:100%;height:100%;display:none;background:#3cc;">
+</div>
 </body>
 </html>
