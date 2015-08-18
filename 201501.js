@@ -23,7 +23,7 @@ window.onload=function(){
 	$("#bet2").fadeIn(1000).html('<div style="text-align:center;position:fixed;width:100%;height:20px;top:50%;margin-top:-10px;line-height:20px;font-size:20px;color:#fff;">error：你的高度真的太……看不到的啦</div>');
   }
   //自适应over
-  oncl1;
+  oncl1();
 }
 function oncl1()
 {
