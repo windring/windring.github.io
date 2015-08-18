@@ -10,7 +10,7 @@ window.onload=function(){
   autoUI();
   oncl1();
 }
-//body.onresize=autoUI();
+$(window).resize(autoUI);
 function autoUI()
 {
   //自适应start
