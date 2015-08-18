@@ -7,23 +7,37 @@ var iniofp=1;
 var path="http://7sbxv9.com1.z0.glb.clouddn.com/";//伟大的七牛的前缀
 var mstring="http://7sbxv9.com1.z0.glb.clouddn.com/1.midi";
 window.onload=function(){
+  autoUI();
+  oncl1();
+}
+//body.onresize=autoUI();
+function autoUI()
+{
   //自适应start
   if(window.innerWidth<=1000)
   {
-	$(".tagmsgs").fadeToggle(1000);
-	$("#tagmsg").fadeToggle(1000);
+	$(".tagmsgs").fadeOut(1000);
+	$("#tagmsg").fadeOut(1000);
+  }else{
+	$(".tagmsgs").fadeIn(1000);
+	$("#tagmsg").fadeIn(1000);
   }
   if(window.innerWidth<=600)
   {
     $(".bara").fadeOut();
   }
+  else{
+	$(".bara").fadeIn();
+  }
   if(window.innerHeight<=426)
   {
     $("#bet1").fadeOut(1000);
 	$("#bet2").fadeIn(1000).html('<div style="text-align:center;position:fixed;width:100%;height:20px;top:50%;margin-top:-10px;line-height:20px;font-size:20px;color:#fff;">error：你的高度真的太……看不到的啦</div>');
+  }else{
+	$("#bet2").fadeOut(1000).text("");
+	$("#bet1").fadeIn(1000);
   }
   //自适应over
-  oncl1();
 }
 function oncl1()
 {
