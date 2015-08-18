@@ -6,166 +6,15 @@
 windring[LAST-20150816]
 </title>
 <script type="text/javascript" src="http://sandbox.runjs.cn/js/sandbox/jquery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="201501.js"></script>
 <script>
-var au_tick=2;
-var iniofp=1;
-var path="http://7sbxv9.com1.z0.glb.clouddn.com/";//伟大的七牛的前缀
-var mstring="http://7sbxv9.com1.z0.glb.clouddn.com/1.midi";
-window.onload=oncl1;
-function oncl1()
-{	
-  if(iniofp==0)
-    {
-      document.getElementById("l1").innerHTML=">";
-	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
-	  iniofp=1;
-	}else{
-      document.getElementById("l1").innerHTML="II";
-	  MIDIjs.play(mstring);
-	  iniofp=0;
-	}
-}function nextm(){
-  if(au_tick<=4)
-	{	
-	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
-	  mstring=path+(au_tick++)+".midi";
-	  MIDIjs.play(mstring);
-	}else{
-      alert("full");
-	  au_tick=1;
-	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
-	  mstring=path+(au_tick++)+".midi";
-	  MIDIjs.play(mstring);
-	}
-}function backm(){
-  if(au_tick>1)
-	{	
-	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
-	  mstring=path+(au_tick--)+".midi";
-	  MIDIjs.play(mstring);
-	}else{
-	  alert("full");
-	  au_tick=4;
-	  if(iniofp==0){iniofp=1;MIDIjs.stop();}
-	  mstring=path+(au_tick--)+".midi";
-	  MIDIjs.play(mstring);
-	}
-}
-//一些ui设计
-function conft(){
-  var confta=document. getElementById("tagmsg");
-  if(confta.style.right=="0px")
-  {
-    confta.style.right="-100%";
-  }else{
-    confta.style.right="0px";
-  }
-}function closethis(){
-  this.style.display="none";
-}
-//over
+
 </script>
-<style>
-html,body{
-margin:0px;
-padding:0px;
-width:100%;
-height:100%;
-position:relative;
-font-size:10px;
-background:#efefff;
-}
-#bar{
-width:100%;
-height:50px;
-background:#66ccff;
-position:fixed;
-bottom:0px;
-}
-#cot{
-width:100px;
-height:100px;
-line-height:100px;
-font-size:100px;
-text-algin:center;
-position:absolute;
-left:0px;
-top:0px;
-float:left;
-padding-left:100px;
-padding-right:100px;
-padding-top:50px;
-padding-bottom:50px;
-}
-#mplay{
-	padding-left:30px;
-    padding-right:30px;
-    margin:0px;
-	width:200px;
-	height:80px;
-	background:#66ccff;
-	border:20px solid #99ccff;
-	}#mplay p,#mplay l{
-	float:left;
-	display:block;
-	width:50px;
-    height:50px;
-    line-height:50px;
-    color:#fff;
-    line-weight:120px;
-    margin-left:0px;
-    margin-right:0px;
-    border-radius:50px;
-    text-align:center;
-    background:#99ccff;
-    border:5px solid #99ddff;	
-}
-#mplay l:hover,#mplay p:hover{
-	background:#99eeff;
-}
-#mplay l{
-	width:70px;
-	height:70px;
-	border-radius:70px;
-	line-height:70px;
-}
-#tagmsg{
-width:auto;
-height:auto;
-position:fixed;
-right:0px;
-bottom:50px;
-transition: right 5s; 
--moz-transition:right 5s;
--webkit-transition:right 5s;
--o-transition:right 5s; 
-box-shadow:10px 10px 10px 10px #66ccff;
-float:right;
-font-size:16px;
-font-weight:900;
-}
-.tagmsgs{
-width:auto;
-height:auto;
-margin:10px;
-box-shadow:0px 0px 8px 5px #66ccff;
-float:right;
-clear:both;
-font-size:16px;
-font-weight:900;
-}
-#warning{
-background:#fff;
-float:right;
-}
-.bara{
-line-height:10px;float:right;display:block;width:100px;height:30px;padding:5px;background:#3592DD;border:#4CC2FF 5px solid;text-align:center;color:white;text-decoration:none;font-weight:25px;
-}
-</style>
+<link rel="stylesheet" type="text/css" href="201501.css" />
 </head>
 <body>
-<div id="bet1" style="width:100%;height:100%;margin:0px;padding:0px;">
-<div style="position:fixed;box-shadow: 10px 10px 5px #888888;width:300px;top:50%;margin-top:-200px;left:50%;margin-left:-150px;">
+<div id="bet1" style="">
+<div id="midiuidiv1" style="">
 
 <!--big logo start-->
 <svg version="1.1" height="200" width="300" style="margin:0px;padding:0px;">
@@ -271,69 +120,70 @@ blog<br />
 </br>
 </a>
 
-<a class="bara" href="#" style="" onclick="$('#ppl').fadeToggle(500);">
-<div id="ppl" style="position:relative;left:-95px;top:-210px;width:200px;height:200px;background:#000;opacity:0.7;display:none;margin-bottom:-200px;">
+<a class="bara" href="#" style="" onclick="$('#ppl').fadeToggle(500);"><!--小东西导航-->
+<div id="ppl" style="">
   <div id="ch1"
-       style="width:100px;height:100px;background:#6cf;float:left;text-algin:center;" 
+       style="background:#6cf;" 
 	   onmouseover="$('#ch1').fadeToggle(200).fadeToggle(100)"
 	   onclick="window.open('http://sandbox.runjs.cn/show/f0vpx4cq')">
-    <div style="width:80px;height:10px;margin:45px 10px 45px 10px;line-height:10px;color:#930;">
+    <div class="ppltextc" style="color:#930;">
 	弹球君
 	</div>
   </div>
-  <div id="ch2" style="width:100px;height:100px;float:left;"></div>
-  <div id="ch3" style="width:100px;height:100px;float:left;"></div>
+  <div id="ch2" style=""></div>
+  <div id="ch3" style=""></div>
   <div id="ch4" 
-       style="width:100px;height:100px;background:#f36;float:left;" 
+       style="background:#f36;" 
 	   onmouseover="$('#ch4').fadeToggle(200).fadeToggle(100)"
 	   onclick="window.open('http://sandbox.runjs.cn/show/pktpzfaw')"
 	   >
-	<div style="width:80px;height:10px;margin:45px 10px 45px 10px;line-height:10px;color:#11ffff;">
+	<div class="ppltextc" style="color:#11ffff;">
 	数据君
 	</div>
   </div>
 </div>
-<div id="pp11" style="width:80px;height:10px;line-height:10px;padding:10px;position:absolute;right:250px;top:10px;">小东西</div>
+<div id="ppll" style="right:250px;top:10px;">小东西</div>
 </a>
 
-<a class="bara" href="#" style="position:static;">
-  <div id="mapp" style="display:none;width:400px;height:200px;opacity:1.0;background:#000;position:relative;left:-10px;top:-210px;">
-    <div id="mapp1" style="width:100px;height:100px;float:left;background:#6cf;" onclick="fin('#66ccff')" onmouseout="fout()">
-	  <div style="color:#993300;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#66CCFF</div>
+<a class="bara" href="#" style="position:static;"><!--颜色仓库-->
+  <div id="mapp" style="">
+    <div id="mapp1" style="background:#6cf;" onclick="fin('#66ccff')" onmouseout="fout()">
+	  <div class="mappcontent" style="color:#993300;">#66CCFF</div>
 	</div>
-	<div id="mapp2" style="width:100px;height:100px;float:left;background:#e00;" onclick="fin('#ee0000')" onmouseout="fout()">
-	  <div style="color:#1ff;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#EE0000</div>
+	<div id="mapp2" style="background:#e00;" onclick="fin('#ee0000')" onmouseout="fout()">
+	  <div class="mappcontent" style="color:#1ff;">#EE0000</div>
 	</div>
-	<div id="mapp2" style="width:100px;height:100px;float:left;background:#6fc;" onclick="fin('#66ffcc')" onmouseout="fout()">
-	  <div style="color:#903;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#66FFCC</div>
+	<div id="mapp3" style="background:#6fc;" onclick="fin('#66ffcc')" onmouseout="fout()">
+	  <div class="mappcontent" style="color:#903;">#66FFCC</div>
 	</div>
-	<div id="mapp2" style="width:100px;height:100px;float:left;background:#8eccc9;" onclick="fin('#8eccc9')" onmouseout="fout()">
-	  <div style="color:#713336;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#8ECCC9</div>
+	<div id="mapp4" style="background:#8eccc9;" onclick="fin('#8eccc9')" onmouseout="fout()">
+	  <div class="mappcontent" style="color:#713336;">#8ECCC9</div>
 	</div>
-	<div id="mapp2" style="width:100px;height:100px;float:left;background:#ff9;" onclick="fin('#ffff99')" onmouseout="fout()">
-	  <div style="color:#006;text-algin:center;height:10px;width:80px;margin:45px 10px 45px 10px;">#FFFF99</div>
+	<div id="mapp5" style="background:#ff9;" onclick="fin('#ffff99')" onmouseout="fout()">
+	  <div class="mappcontent" style="color:#006;">#FFFF99</div>
 	</div>
-	<div style="width:300px;height:100px;background:#fff;opacity:0.5;float:left;">
-	  <input type="text" id="in1" style="clean:both;border:1px #000 solid;float:left;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;" value="66"></input>
-	  <input type="text" id="out1" style="clean:both;border:1px #000 solid;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;float:right;" value="输出III"></input>
-	  <input type="text" id="in2" style="clean:both;border:1px #000 solid;float:left;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;" value="CC"></input>
-	  <input type="text" id="out2" style="clean:both;border:1px #000 solid;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;float:right;" value="输出II"></input>
-	  <input type="text" id="in3" style="clean:both;border:1px #000 solid;float:left;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;" value="FF"></input>
-	  <input type="text" id="out3" style="clean:both;border:1px #000 solid;width:148px;opacity:1.0;height:20px;margin:0px;padding:0px;float:right;" value="输出I"></input>
+	<div id="fasejsqcover" style="">
+	  <input type="text" id="in1" style="float:left;" value="66"></input>
+	  <input type="text" id="out1" style="float:right;" value="输出III"></input>
+	  <input type="text" id="in2" style="float:left;" value="CC"></input>
+	  <input type="text" id="out2" style="float:right;" value="输出II"></input>
+	  <input type="text" id="in3" style="float:left;" value="FF"></input>
+	  <input type="text" id="out3" style="float:right;" value="输出I"></input>
 	  <button id="outall"
 	          onclick="$('#out1').val((255-parseInt($('#in1').val(),16)).toString(16));
 	                   $('#out2').val((255-parseInt($('#in2').val(),16)).toString(16));
 					   $('#out3').val((255-parseInt($('#in3').val(),16)).toString(16));
 					   $('#outall').text('#'+$('#out1').val().toString()+$('#out2').val().toString()+$('#out3').val().toString());
 					   "
-		      style="width:150px;height:20px;padding:0px;margin:0px;">
+		      style="">
 			  launch
 	  </button>
-	  <br><span style="font-size:10px;color:#000;">--反色器--提示：一位数的请自行添加0。</span>
+	  <br><span style="" id="fasesp">--反色器--提示：一位数的请自行添加0。</span>
 	</div>
   </div>
-<div style="width:100px;height:10px;padding:10px 0px 10px 0px;text-algin:center;position:absolute;right:370px;top:10px;"
+<div style="right:370px;top:10px;"
      onclick="$('#mapp').fadeToggle();"
+	 id="ppll2"
 	 >
 颜色仓库
 </div>
@@ -343,23 +193,9 @@ blog<br />
 <!--伟大的midi-->
 <script type='text/javascript' src='http://www.midijs.net/lib/midi.js'></script>
 <script>
-function fin(shiliu)
-{
-if(document.getElementById("bet2").style.display=="none")
-{
-$("#bet2").css("background",shiliu);
-$("#bet1").fadeToggle(500,function(){$("#bet2").fadeToggle(500);});
-}
-else{
-$("#bet2").fadeToggle(500,function(){$("#bet1").fadeToggle(500);});
-}
-}
-function fout()
-{
-$("#bet2").fadeOut(500,function(){$("#bet1").fadeIn(500);});
-}
+
 </script>
-<div id="bet2" style="width:100%;height:100%;display:none;background:#3cc;">
+<div id="bet2" style="display:none;background:#3cc;">
 </div>
 </body>
 </html>

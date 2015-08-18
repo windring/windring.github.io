@@ -1,0 +1,225 @@
+/**/
+/**/
+/**/
+html,body{
+  margin:0px;
+  padding:0px;
+  width:100%;
+  height:100%;
+  position:relative;
+  font-size:10px;
+  background:#efefff;
+}
+/**/
+/**/
+/**/
+/**/
+/*midi播放器界面相关start*/
+/**/
+#midiuidiv1{
+  position:fixed;
+  box-shadow: 10px 10px 5px #888888;
+  width:300px;
+  top:50%;
+  margin-top:-200px;
+  left:50%;
+  margin-left:-150px;
+}#cot{
+  width:100px;
+  height:100px;
+  line-height:100px;
+  font-size:100px;
+  text-algin:center;
+  position:absolute;
+  left:0px;
+  top:0px;
+  float:left;
+  padding-left:100px;
+  padding-right:100px;
+  padding-top:50px;
+  padding-bottom:50px;
+}#mplay{
+  padding-left:30px;
+  padding-right:30px;
+  margin:0px;
+  width:200px;
+  height:80px;
+  background:#66ccff;
+  border:20px solid #99ccff;
+}#mplay p,#mplay l{
+  float:left;
+  display:block;
+  width:50px;
+  height:50px;
+  line-height:50px;
+  color:#fff;
+  line-weight:120px;
+  margin-left:0px;
+  margin-right:0px;
+  border-radius:50px;
+  text-align:center;
+  background:#99ccff;
+  border:5px solid #99ddff;	
+}#mplay l:hover,#mplay p:hover{
+  background:#99eeff;
+}#mplay l{
+  width:70px;
+  height:70px;
+  border-radius:70px;
+  line-height:70px;
+}
+/**/
+/*midi播放器相关over*/
+/**/
+/**/
+/*类消息通知（tagmsg）相关start*/
+/**/
+#tagmsg{
+  width:auto;
+  height:auto;
+  position:fixed;
+  right:0px;
+  bottom:50px;
+  transition: right 5s; 
+  -moz-transition:right 5s;
+  -webkit-transition:right 5s;
+  -o-transition:right 5s; 
+  box-shadow:10px 10px 10px 10px #66ccff;
+  float:right;
+  font-size:16px;
+  font-weight:900;
+}.tagmsgs{
+  width:auto;
+  height:auto;
+  margin:10px;
+  box-shadow:0px 0px 8px 5px #66ccff;
+  float:right;
+  clear:both;
+  font-size:16px;
+  font-weight:900;
+}#warning{
+  background:#fff;
+  float:right;
+}
+/**/
+/*类信息通知over*/
+/**/
+/**/
+/*类任务栏相关start*/
+/**/
+.bara{
+  line-height:10px;
+  float:right;
+  display:block;
+  width:100px;
+  height:30px;
+  padding:5px;
+  background:#3592DD;
+  border:#4CC2FF 5px solid;
+  text-align:center;
+  color:white;
+  text-decoration:none;
+  font-weight:25px;
+}#bar{
+  width:100%;
+  height:50px;
+  background:#66ccff;
+  position:fixed;
+  bottom:0px;
+}
+/**/
+/*类任务栏相关over*/
+/**/
+/**/
+/*卡片式页面设计相关start*/
+/**/
+#bet1,#bet2{
+  width:100%;
+  height:100%;
+  margin:0px;
+  padding:0px;
+}
+/**/
+/*卡片式页面设计相关over*/
+/**/
+/**/
+/*东西仓库相关start*/
+/**/
+#ppl{
+  position:relative;
+  left:-95px;
+  top:-210px;
+  width:200px;
+  height:200px;
+  background:#000;
+  opacity:0.7;
+  display:none;
+  margin-bottom:-200px;
+}#ch1,#ch2,#ch3,#ch4{
+  width:100px;
+  height:100px;
+  float:left;
+  text-algin:center;
+}.ppltextc{
+  width:80px;
+  height:10px;
+  margin:45px 10px 45px 10px;
+  line-height:10px;
+}#ppll,#ppll2{
+  width:80px;
+  text-algin:center;
+  height:10px;
+  line-height:10px;
+  padding:10px;
+  position:absolute;
+}
+/**/
+/*东西仓库相关over*/
+/**/
+/**/
+/*颜色仓库相关start*/
+/**/
+#mapp{
+  display:none;
+  width:400px;
+  height:200px;
+  opacity:0.8;
+  background:#000;
+  position:relative;
+  left:-10px;
+  top:-210px;
+}#mapp1,#mapp2,#mapp3,#mapp4,#mapp5{
+  width:100px;
+  height:100px;
+  float:left;
+}.mappcontent{
+  text-algin:center;
+  height:10px;
+  width:80px;
+  margin:45px 10px 45px 10px;
+}#in1,#in2,#in3,#out1,#out2,#out3{
+  clean:both;
+  border:1px #000 solid;
+  width:148px;
+  opacity:1.0;
+  height:20px;
+  margin:0px;
+  padding:0px;
+}#fasejsqcover{
+  width:300px;
+  height:100px;
+  background:#fff;
+  opacity:0.5;
+  float:left;
+}#outall{
+  width:150px;
+  height:20px;
+  padding:0px;
+  margin:0px;
+}#fasesp{
+  font-size:10px;
+  color:#000;
+}
+/**/
+/*颜色仓库相关over*/
+/**/
