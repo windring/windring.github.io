@@ -145,7 +145,7 @@ html,body{
 /**/
 /*东西仓库相关start*/
 /**/
-#ppl{
+#ppl,#blgs{
   position:relative;
   left:-95px;
   top:-210px;
@@ -155,7 +155,7 @@ html,body{
   opacity:0.7;
   display:none;
   margin-bottom:-200px;
-}#ch1,#ch2,#ch3,#ch4{
+}#ch1,#ch2,#ch3,#ch4,#blgs1,#blgs2,#blgs3,#blgs4{
   width:100px;
   height:100px;
   float:left;
@@ -165,7 +165,7 @@ html,body{
   height:10px;
   margin:45px 10px 45px 10px;
   line-height:10px;
-}#ppll,#ppll2{
+}#ppll,#ppll2,#ppll3{
   width:80px;
   text-algin:center;
   height:10px;
