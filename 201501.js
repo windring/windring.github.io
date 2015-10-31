@@ -1,5 +1,4 @@
 
-//
 //midi播放器部分start
 //
 var au_tick=2;
@@ -9,6 +8,7 @@ var mstring="http://7sbxv9.com1.z0.glb.clouddn.com/1.midi";
 window.onload=function(){
   autoUI();
   oncl1();
+
 }
 $(window).resize(autoUI);
 function autoUI()
@@ -37,7 +37,8 @@ function autoUI()
 	$("#bet2").fadeOut(1000).text("");
 	$("#bet1").fadeIn(1000);
   }
-  //自适应over
+  
+   //自适应over
 }
 function oncl1()
 {

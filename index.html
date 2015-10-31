@@ -5,7 +5,7 @@
 <title>
 windring[LAST-20151004]
 </title>
-<script type="text/javascript" src="http://sandbox.runjs.cn/js/sandbox/jquery/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="http://sandbox.runjs.cn/js/sandbox/jquery/jquery-1.8.2.min.js"></script>  
 <script type="text/javascript" src="201501.js"></script>
 <script>
 
@@ -30,7 +30,7 @@ fill-opacity:1.0;stroke-opacity:0.9"/>
 <!--over-->
 <!--the font-->
 <div id="cot">
-靈
+♤
 </div>
 <!--over-->
 <!--控件-->
@@ -56,11 +56,11 @@ II
 </div>
 
 <div class="tagmsgs">
---Ⅶ:此次更新历时39天++++++++++++++++++--<br>
---因为去学校了嘛………………+++++++++--<br>
+--Ⅶ:1101!然而万圣节就过了++++++++++++++++++--<br>
+--怪我咯，小小的部件调了一小时………+++++++++--<br>
 --EAs小组主页含讨论page已上线++++++++++--<br>
 --blog重新上线，特别感谢rujs和duoshuo++--<br>
---明天要去学校了，加油吧！+++++++++++++--<br>
+--考试了，加油吧！+++++++++++++--<br>
 </div>
 
 
@@ -225,7 +225,23 @@ TAGMSG<br />
 <!--伟大的midi-->
 <script type='text/javascript' src='http://www.midijs.net/lib/midi.js'></script>
 <script>
+//西历20151101
+//东八区、十一区20151031
+//本地时间10:37开始编辑
+function creates()
+{
+var halls="<div class='halls'>★</div>";
+ setInterval(
+  function(){
+    var hstart=Math.random()*window.innerWidth;
+    var hend=window.innerWidth/6*Math.random()+hstart;
+$(halls).clone().appendTo("body").css({position:"fixed",top:"-20px",fontSize:"20px",left:hstart+"px",color:"#FF0"}).animate({top:window.innerHeight+"px",left:hend+"px",opacity:0.1}, 5000+10000*Math.random(),function(){$(this).remove();});
+}
+,1000*Math.random());
 
+}
+//结束
+creates();
 </script>
 <div id="bet2" style="display:none;background:#3cc;">
 </div>
