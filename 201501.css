@@ -16,7 +16,7 @@ html,body{
   height:100%;
   position:relative;
   font-size:10px;
-  background:#efefff;
+  background:#000;
 }
 /**/
 /**/
@@ -26,7 +26,7 @@ html,body{
 /**/
 #midiuidiv1{
   position:fixed;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 0px 0px 20px 20px #888888;
   width:300px;
   top:50%;
   margin-top:-200px;
@@ -96,6 +96,7 @@ html,body{
   float:right;
   font-size:16px;
   font-weight:900;
+  background:#fefefe;
 }.tagmsgs{
   width:auto;
   height:auto;
@@ -105,6 +106,7 @@ html,body{
   clear:both;
   font-size:16px;
   font-weight:900;
+  background:#fefefe;
 }#warning{
   background:#fff;
   float:right;

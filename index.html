@@ -235,7 +235,7 @@ var halls="<div class='halls'>★</div>";
   function(){
     var hstart=Math.random()*window.innerWidth;
     var hend=window.innerWidth/6*Math.random()+hstart;
-$(halls).clone().appendTo("body").css({position:"fixed",top:"-20px",fontSize:"20px",left:hstart+"px",color:"#FF0"}).animate({top:window.innerHeight+"px",left:hend+"px",opacity:0.1}, 5000+10000*Math.random(),function(){$(this).remove();});
+$(halls).clone().appendTo("body").css({position:"fixed",top:"-20px",fontSize:20+20*Math.random()+"px",left:hstart+"px",color:"#FF0"}).animate({top:window.innerHeight+"px",left:hend+"px",opacity:0.1}, 5000+10000*Math.random(),function(){$(this).remove();});
 }
 ,1000*Math.random());
 
