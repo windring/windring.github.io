@@ -16,7 +16,7 @@ html,body{
   height:100%;
   position:relative;
   font-size:10px;
-  background:#000;
+  background:#C2EAF9;
 }
 /**/
 /**/
@@ -26,8 +26,9 @@ html,body{
 /**/
 #midiuidiv1{
   position:fixed;
-  box-shadow: 0px 0px 20px 20px #888888;
+  box-shadow: 0px 0px 20px 20px #888;
   width:300px;
+  height:320px;
   top:50%;
   margin-top:-200px;
   left:50%;
@@ -86,17 +87,18 @@ html,body{
   width:auto;
   height:auto;
   position:fixed;
-  right:0px;
-  bottom:50px;
+  bottom:80px;
   transition: right 5s; 
   -moz-transition:right 5s;
   -webkit-transition:right 5s;
   -o-transition:right 5s; 
-  box-shadow:10px 10px 10px 10px #66ccff;
+  box-shadow:0px 0px 8px 5px #66ccff;
   float:right;
+  right:10px;
   font-size:16px;
   font-weight:900;
   background:#fefefe;
+  clear:both;
 }.tagmsgs{
   width:auto;
   height:auto;
@@ -125,7 +127,7 @@ html,body{
   height:30px;
   padding:5px;
   background:#3592DD;
-  border:#4CC2FF 5px solid;
+  border:#66ccff 5px solid;
   text-align:center;
   color:white;
   text-decoration:none;
@@ -136,6 +138,7 @@ html,body{
   background:#66ccff;
   position:fixed;
   bottom:0px;
+  box-shadow: 0px 0px 20px 20px #888;
 }
 /**/
 /*类任务栏相关over*/

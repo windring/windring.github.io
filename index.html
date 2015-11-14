@@ -6,34 +6,23 @@
 windring[LAST-20151108]
 </title>
 <script type="text/javascript" src="http://sandbox.runjs.cn/js/sandbox/jquery/jquery-1.8.2.min.js"></script>  
-<script type="text/javascript" src="201501.js"></script>
+<script type="text/javascript" src="L/201501.js"></script>
 <script>
-
 </script>
-<link rel="stylesheet" type="text/css" href="201501.css" />
+<link rel="stylesheet" type="text/css" href="L/201501.css" />
 </head>
 <body>
 <div id="bet1" style="">
 <div id="midiuidiv1" style="">
-
 <!--big logo start-->
 <svg version="1.1" height="200" width="300" style="margin:0px;padding:0px;">
-<rect x="0" y="0" width="300" height="200" rx="0" ry="0"
-style="fill:#66ccff;stroke:pink;stroke-width:0;
-fill-opacity:1.0;stroke-opacity:0.9"/>
-<polygon points="50,0 250,0 250,200 50,200" style="fill:#5cf; stroke:#000000;stroke-width:4"/>
-<polygon points="150,200 50,27 250,27" style="fill:#5cf; stroke:#000000;stroke-width:4; fill-opacity:0.5;stroke-opacity:0.5
-"/>
-<polygon points="150,0 50,173 250,173" style="fill:#5cf; stroke:#000000;stroke-width:4; fill-opacity:0.5;stroke-opacity:0.5;
-"/>
-</svg>
-<!--over-->
-<!--the font-->
+<rect x="0" y="0" width="300" height="200" rx="0" ry="0" style="fill:#66ccff;stroke:pink;stroke-width:0;fill-opacity:1.0;stroke-opacity:0.9"/>
+<polygon points="150,200 63.4,50 236.6,50" style="fill:#5cf; stroke:#000000;stroke-width:1; fill-opacity:0.5;stroke-opacity:0.5"/>
+<polygon points="150,0 63.4,150 236.4,150" style="fill:#5cf; stroke:#000000;stroke-width:1; fill-opacity:0.5;stroke-opacity:0.5;"/>
+</svg><!--over--><!--the font-->
 <div id="cot">
-♤
-</div>
-<!--over-->
-<!--控件-->
+㊫
+</div><!--over--><!--控件-->
 <div id="mplay">
 <p onclick="backm()">
 &lt;&lt;
@@ -162,7 +151,7 @@ TAGMSG<br />
   </div>
   <div id="ch2" style="background:#6fc;" 
 	   onmouseover="$('#ch2').fadeToggle(200).fadeToggle(100)"
-	   onclick="window.open('http://windring.github.io/mrxl-ol-0.1.html')">
+	   onclick="window.open('http://sandbox.runjs.cn/show/kolmprqx')">
     <div class="ppltextc" style="color:#903;">
 	mrxlOL
 	</div>
@@ -234,14 +223,14 @@ TAGMSG<br />
 //本地时间10:37开始编辑
 function creates()
 {
-var halls="<div class='halls'>★</div>";
+var halls="<div class='halls'>❆</div>";
  setInterval(
   function(){
     var hstart=Math.random()*window.innerWidth;
     var hend=window.innerWidth/6*Math.random()+hstart;
-$(halls).clone().appendTo("body").css({position:"fixed",top:"-20px",fontSize:20+20*Math.random()+"px",left:hstart+"px",color:"#FF0"}).animate({top:window.innerHeight+"px",left:hend+"px",opacity:0.1}, 5000+10000*Math.random(),function(){$(this).remove();});
+$(halls).clone().appendTo("body").css({position:"fixed",top:"-20px",fontSize:20+20*Math.random()+"px",left:hstart+"px",color:"#FFF"}).animate({top:window.innerHeight+"px",left:hend+"px",opacity:0.1}, 5000+10000*Math.random(),function(){$(this).remove();});
 }
-,1000*Math.random());
+,3000*Math.random());
 
 }
 //结束
