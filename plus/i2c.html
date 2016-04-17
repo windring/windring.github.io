@@ -1,0 +1,78 @@
+<script>
+var img;
+var imgw;
+var imgh;
+var canvas;
+var ctx;
+var cdata;
+function setimg(f)
+{
+var r=new FIleReader();
+r.onload=function(e)
+{
+document.getElementById("myimg").src=e.target.result;
+}
+r.readAsDataURL(f[0]);
+init();
+}
+function init()
+{
+img=document.getElementById("myimg");
+imgw=img.width;
+imgh=img.height;
+canvas=document.getElementById("mycan");
+canvas.width=imgw;
+canvas.height=imgh;
+ctx=canvas.getContext("2d");
+ctx.drawImage(img,0,0,imgw,imgh);
+cdata=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+//alert(cdata);
+}
+function blockgrayba(sx,sy,a)//扫描x,y,区域边长
+{
+//var index=4*(sy*imgw+sx);
+var sgray=0;
+for(var by=sy;by<sy+a;by++)
+{
+for(var bx=sx;bx<sx+a;sx++)
+{
+var in=4*(by*imgw+bx);
+var gray=(data[in]+data[in+1]+data[in+2])/3;
+sgray+=gray;
+//还可以计算平均r,g,b...
+}
+}
+//计算平均
+return sgray/(a*a);
+}
+function i2c(data,qd)//图片数据，细分单位[px
+{
+var ro=~~(imgw/qd);//取整，列数
+var lo=~~(imgh/qd);//行数
+var map=['@','#','$','k','d','t','j','i','.','&nbsp;'];
+var output;//输出字符串
+for(var fx=0;fx<ro;fx++
+{
+for(var fy=0;fy<lo;lo++)
+{
+var sendx=fx*qd;
+var sendy=fy*qd;
+var fg=blockgrayba(sendx,sendy,qd);
+output+=map[~~(fg/map.length)];
+}
+output+="<br />";//回车符
+}
+document.getELementById("outb").innerHTML=output;
+}
+</script>
+<style>
+#outb{
+family:Courier New;
+font-size:14px;
+line-height:14px;
+}
+</style>
+<input type="file" id="inbutton" onchange=setimg(this.files) />
+<img id="myimg" src="" />
+<pre id="outb">
+</pre>
