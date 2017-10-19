@@ -1,6 +1,8 @@
-==||>me<||==
-
-gomoku
+function loadmon(f){
+	return f.toString().split('\n').slice(1,-1).join('\n')+'\n';
+}
+var mon=loadmon(function(){/*
+gomoku  
 继承自:gomoku(assorted,什锦,五目,ごもく),windring(风铃),baitieyi(Beate i White,白铁翼)
 
 > 人只能自己救自己
@@ -35,3 +37,4 @@ gomoku
 
 工作(雾)邮箱:lika@assorted.pw
 常邮箱(塞满了广告):baitieyi@outlook.com
+*/});
