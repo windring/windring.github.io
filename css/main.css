@@ -97,13 +97,6 @@ html,body,#home,#links,#about{
 }.links-a:hover::after{
   content: ']';
   right: -12px;
-}#monkey{
-  width: 100%;
-  text-align: center;
-  font-size: 14px;
-  height: 60px;
-  line-height: 20px;
-  color: #fff;
 }
 
 @media (min-width: 768px){
