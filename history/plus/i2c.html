@@ -1,0 +1,114 @@
+<title>
+img2acsii
+</title>
+<meta charset="utf-8" />
+<!--这是一个 图片to字符画 转换应用，参考大道至简的博文-->
+<!--使用灰度计算，核心公式(R+G+B)/3-->
+<!--谁知道是彼岸的L的第几个诞生日啦，祝福吧-->
+<!--20160417,gomoku P-->
+<script>
+var img;
+var imgw;
+var imgh;
+var canvas;
+var ctx;
+var cdata;
+</script>
+<script>
+function setimg(f)
+{
+var r=new FileReader();
+r.onload=function(e)
+{
+document.getElementById("myimg").src=e.target.result;
+init();
+}
+r.readAsDataURL(f[0]);
+}
+</script>
+<script>
+function init()
+{
+img=document.getElementById("myimg");
+imgw=img.width;
+imgh=img.height;
+canvas=document.getElementById("mycan");
+canvas.width=imgw;
+canvas.height=imgh;
+ctx=canvas.getContext("2d");
+ctx.drawImage(img,0,0,imgw,imgh);
+cdata=ctx.getImageData(0,0,canvas.width,canvas.height).data;
+alert("init over,test data[3]="+cdata[3]+",imgw="+imgw);
+}
+</script>
+<script>
+function blockgrayba(sx,sy,a)//扫描x,y,区域边长
+{
+//var index=4*(sy*imgw+sx);
+var sgray=0;
+for(var by=sy;by<sy+a;by++)
+{
+for(var bx=sx;bx<sx+a;bx++)
+{
+var ind=4*(by*imgw+bx);
+
+var gray=(cdata[ind]+cdata[ind+1]+cdata[ind+2])/3;
+sgray=sgray+gray;
+//还可以计算平均r,g,b...
+}
+}
+//计算平均
+return sgray/(a*a);
+}
+</script>
+<script>
+function i2c(qd)//图片数据，细分单位[px
+{
+var ro=~~(imgw/qd);//取整，列数
+var lo=~~(imgh/qd);//行数
+var map=['@','#','$','k','d','t','j','i','.','&nbsp;'];
+var output="";//输出字符串
+alert("i2c start,ro,lo:"+ro+","+lo);
+//alert(blockgrayba(0,0,30));
+for(var fy=0;fy<lo;fy++)
+{
+for(var fx=0;fx<ro;fx++)
+{
+var sendx=fx*qd;
+var sendy=fy*qd;
+var fg=blockgrayba(sendx,sendy,qd);
+//alert(fg);
+output+=map[~~(fg/(256/map.length))];
+}
+output+="<br />";//回车符
+}
+document.getElementById("outb").innerHTML=output;
+}
+</script>
+<style>
+#outb{
+family:Courier New;
+font-size:14px;
+line-height:14px;
+letter-spacing:0px;
+border:#6cf 1px solid;
+}
+canvas{
+display:none;
+}
+</style>
+<h1>i2c</h1><br />
+输入分析方块边长(如20:
+<input type="input" id="inp" value="20" />
+<input type="button" value="start" onclick="i2c(document.getElementById('inp').value*1)" />
+选择图片:
+<input type="file" id="inbutton" onchange=setimg(this.files) />
+<br />
+<img id="myimg" src="" />
+<canvas id="mycan">
+</canvas>
+<br />
+输出:
+<br />
+<pre id="outb">
+</pre>

@@ -1,0 +1,30 @@
+html,body{
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	position:relative;
+}#can{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	opacity:.7;
+	position:absolute;
+	top:0;
+	left:0;
+}.doli0,.doli1,.doli2{
+	width:30px;
+	height:30px;
+	border-radius:15px;
+	border:1px solid #6cf;
+	float:left;
+	opacity:.2;
+}#doli6,#doli13{
+	clear:right;
+}#doli7,#doli14{
+	clear:left;
+}#shs{
+	position:absolute;
+	right:0;
+}
