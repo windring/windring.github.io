@@ -1,62 +1,98 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>[gomoku]起风了，唯有努力生存[last:20170717]</title>
-    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.bootcss.com/github-markdown-css/2.8.0/github-markdown.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link rel="shortcut icon" href="">
-    <!--[if lt IE 9]>
-      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <header>
-      <nav class="nav nav-pills">
-        <a href="#home" id="mainav">Home</a>
-        <a href="https://baitieyi.coding.me/assorted/tree/">Blog</a>
-        <a href="#links">Links</a>
-        <a href="#about">About</a>
-      </nav>
-    </header>
-    <div>
-      <div id="home">
-        <div id="me">
-          <div id="me-text">
-            <br>
-            gomoku<br>
-            <br>
-            起风了，唯有努力生存。<br>
-            如果你在进行一场绝对不会受伤的恋爱，<br>
-            别忘了带上你的笔和纸。<br>
-			assorted迁回了github，将会改版(＾Ｕ＾)ノ~ＹＯ
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>[assorted]起风了，唯有努力生存[last:20171112]</title>
+  <link href="css/index.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/github.css">
+  <link href="https://vuejs.bootcss.com/css/page.css" rel="stylesheet">
+  <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+  <nav id="nav">
+    <a href="#!/home"><i class="fa fa-snowflake-o" aria-hidden="true"></i>|Home</a>
+    <a target="_blank" href="https://windring217.wordpress.com/"><i class="fa fa-file" aria-hidden="true"></i>|Blog</a>
+    <a href="#!/friends"><i class="fa fa-heart-o" aria-hidden="true"></i></i>|Friends</a>
+    <a href="#!/about"><i class="fa fa-anchor" aria-hidden="true"></i>|About</a>
+  </nav>
+  <hitagi>
+    <section class="sections" nya-id="cell" nav-id="home">
+      <div class="cat">
+        <a target="_blank" href="http://assorted.pw" id="gomoku"></a>
+        <pre><code id="code"></code></pre>
+      </div>
+    </section>
+    <section class="sections" nav-id="friends" nay-id="flex">
+      <div class="hara">
+        <a>
+          <img class="img">
+          <div class="jsery">
+          name
           </div>
-          <div id="me-box">
-            <img src="http://7sbxv9.com1.z0.glb.clouddn.com/100.png">
+        </a>
+      </div>
+      <div class="hara">
+        <a>
+          <img class="img">
+          <div class="jsery">
+          name
           </div>
+        </a>
+      </div>
+      <div class="hara">
+        <a>
+          <img class="img">
+          <div class="jsery">
+          name
+          </div>
+        </a>
+      </div>
+      <div class="hara">
+        <a>
+          <img class="img">
+          <div class="jsery">
+          name
+          </div>
+        </a>
+      </div>
+      <div class="hara">
+        <a>
+          <img class="img">
+          <div class="jsery">
+          name
+          </div>
+        </a>
+      </div>
+    </section>
+    <section class="sections" nav-id="about">
+      <div class="san" id="assorted">
+        <div class="jou">
+          <h3>gomoku</h3>
+          <p>web / acm / baitieyi</p>
+          <ul>
+            <li><a><i class="fa fa-qq" aria-hidden="true"> 1530929042</i></a></li>
+            <li><i class="fa fa-weibo" aria-hidden="true"> windring217</i></li>
+            <li><i class="fa fa-envelope" aria-hidden="true"> lika@assorted.pw</i></li></ul><ul>
+            <li><i class="fa fa-github" aria-hidden="true"> windring</i></li>
+            <li><i class="fa fa-twitter" aria-hidden="true"> tieyi2</i></li>
+            <li><i class="fa">知 gomoku</i></li>
+          </ul>
+        </div>
+        <a href="#!/about-nya" class="down"><i class="fa fa-angle-double-down down" aria-hidden="true"></i></a>
+      </div>
+      <div class="sections san" nav-id="about-nya" nya-id="about" id="about">
+        <div class="jou content">
         </div>
       </div>
-      <div id="links">
-      </div>
-      <div id="about">
-	    <div class="markdown-body">
-		</div>
-      </div>
-    </div>
-    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
-    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="https://cdn.bootcss.com/markdown.js/0.5.0/markdown.min.js"></script>
-    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
-    <script src="js/bmob/bmob-min.js"></script>
-    <script src="js/plug/active.js"></script>
-    <script src="js/plug/llinksld.js"></script>
-    <script src="js/plug/lld.js"></script>
-	<script src="js/plug/pokemonmonmon.js"></script>
-    <script src="js/plug/pnumber.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    </section>
+  </hitagi>
+  <script src="https://highlightjs.org/static/highlight.site.pack.js"></script>
+  <script src="https://cdn.bootcss.com/showdown/1.7.6/showdown.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/text.js"></script>
+  <script>hljs.initHighlightingOnLoad();(ScrollReveal()).reveal('sections');</script>
+</body>
 </html>
