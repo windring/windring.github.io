@@ -243,8 +243,8 @@ hitagi {
 .img {
   position: relative;
   display: block;
-  width: 90px;
-  height: 90px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   border: none;
   margin: 24px auto 12px;
@@ -254,8 +254,9 @@ hitagi {
   line-height: 1em;
   max-height: 2em;
   text-align: center;
+  font-size: 1.5em;
   font-family: Roboto, RobotoDraft, Helvetica, Arial, sans-serif;
-  margin: 2em auto 2em;
+  margin: 1em auto 1em;
 }
 
 @media only screen and (min-width:440px) {
