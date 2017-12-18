@@ -22,9 +22,9 @@ gomoku
 ### About Me
 
 东大陆的一个学生，使用着东八区的时间，十七八岁的骨龄。偶尔打打LL，偶尔补补番。学业繁重，奔走于几个组织之间，乐此不疲（实际上快支撑不住了）。
-喜欢的人是战场原，届不到的。
-我在about.me的页面[about.me/gomoku](https://about.me/gomoku "")
-邮箱：lika@assorted.pw
+喜欢的人是战场原，届不到的。  
+我在about.me的页面[about.me/gomoku](https://about.me/gomoku "")  
+邮箱：lika@assorted.pw  
 
 ### My Links
 
@@ -39,6 +39,20 @@ gomoku
 [google+](https://plus.google.com/u/0/108265196773712975362 "")  
 [instagram](https://www.instagram.com/baitieyi/ "")  
 [facebook](https://www.facebook.com/tieyi.white "")  
+
+### My Works
+
+[koyau](http://koyau.pw/ "")：一年前君名上映之后做的，算是2017的迎新作吧。
+
+[repoxpx](http://assorted.pw/repoxpx/repoxpx.html "")：仿制M67主页的小方块。除了方块模式还有像素模式。但是数据库太久不用的话会有停机可能（数据库现在应该挂了，对，挂了）。
+
+[Lensty](http://baitieyi.coding.me/Lensty/ "")：为了她做的。（模因警告）
+
+[LBSGame](http://assorted.pw/LBSGame/ "")：一个地图游戏，很久不维护了。（事实上并没有完整）（vue移动端化出了点问题）。
+
+
+**working**：2018的迎新作，应该会是一个聊天室，算是怀念吧，想起了之前的一个demo。先行做了个socket控制台划水版（[chatwinsock](https://github.com/windring/chatwinsock "")）。正在想想想。应该会往烟花上靠。
+
 
 ### 将要做
 
