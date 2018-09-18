@@ -58,6 +58,12 @@ gomoku
 
 [makiChat](http://assorted.pw/makiChat/)：使用bmob api的通信toy。
 
+### 更新记录
+
+last:20180709
+
+last:20180918
+
 ### 将要做
 
 ACM！  
