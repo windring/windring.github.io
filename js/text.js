@@ -34,7 +34,7 @@ gomoku
 除了能在本页他处找到的信息外：  
 在以下地方偶尔写写东西：  
 [blog](http://blog.assorted.pw)  
-[Koishumi](http://assorted.pw/Koishumi/#!/home)  
+[Koishumi](http://windring.github.io/Koishumi/#!/home)  
 [shimeru](https://baitieyi.coding.me/assorted/tree/)  
 [blogspot](https://windring217.blogspot.com/)  
 [jianshu](http://www.jianshu.com/u/f4c07e04cc40)  
@@ -47,8 +47,6 @@ gomoku
 ### Works
 
 [koyau](http://koyau.pw/)：一年前君名上映之后做的，算是2017的迎新作吧。
-
-[repoxpx](http://assorted.pw/repoxpx/repoxpx.html)：仿制M67主页的小方块。除了方块模式还有像素模式。但是数据库太久不用的话会有停机可能（数据库现在应该挂了，对，挂了）。
 
 [Lensty](http://baitieyi.coding.me/Lensty/)：实验性AVG（模因警告）。
 
