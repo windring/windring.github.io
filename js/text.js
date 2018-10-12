@@ -33,7 +33,7 @@ gomoku
 
 除了能在本页他处找到的信息外：  
 在以下地方偶尔写写东西：  
-[blog](http://blog.assorted.pwe)  
+[blog](http://blog.assorted.pw)  
 [Koishumi](http://assorted.pw/Koishumi/#!/home)  
 [shimeru](https://baitieyi.coding.me/assorted/tree/)  
 [blogspot](https://windring217.blogspot.com/)  
