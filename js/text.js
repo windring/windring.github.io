@@ -21,13 +21,15 @@ gomoku
 现在喜欢的番剧是```Caligula```。  
 喜欢的人是战场原，届不到的。  
 过去半年在做NKOJ的前端开发。  
+过去几个月在学NLP，快放弃了。  
 择日更新assorted。  
 我在about.me的页面[about.me/gomoku](https://about.me/gomoku)  
-邮箱：lika@assorted.pw  
+邮箱：baitieyi@outlook.com
+邮件请加急  
 
 ### Org
 
-[aclius](http://wiki.acome.ml/)
+[aclius](https://github.com/acliusBackHome/)
 
 ### Links
 
@@ -44,17 +46,9 @@ gomoku
 [instagram](https://www.instagram.com/baitieyi/)  
 [facebook](https://www.facebook.com/tieyi.white)  
 
-### Works
-
-[koyau](http://koyau.pw/)：一年前君名上映之后做的，算是2017的迎新作吧。
+### Arts
 
 [Lensty](http://baitieyi.coding.me/Lensty/)：实验性AVG（模因警告）。
-
-[chatwinsock](https://github.com/windring/chatwinsock)：内网通信toy。
-
-[socketSSR](https://github.com/windring/socketSSR)：公网通信toy。
-
-[makiChat](http://assorted.pw/makiChat/)：使用bmob api的通信toy。
 
 ### 更新记录
 
@@ -67,6 +61,7 @@ last:20181012
 ### 将要做
 
 ACM！  
-学习Mathematic！
+学习Mathematic！  
+更多的前端开发！  
 
 */})));

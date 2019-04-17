@@ -8,4 +8,10 @@
 
 +20171126
 
-lika@assorted.pw
+~~lika@assorted.pw~~
+
+我回来了! 休学旅行了一年多，麻烦学弟了，嘻嘻。
+
+新的邮箱还没配置，投递到这里吧，标注为加急。
+
+baitieyi@outlook.com
