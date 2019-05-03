@@ -7,7 +7,7 @@ var helloworld=function(){
     =helloworld
   .toString();
 };
-helloworld();
+// helloworld();
 (function(nya_global){
   var nya=function(nya_name){
     return Array.prototype.slice.call(document.querySelectorAll(nya_name));

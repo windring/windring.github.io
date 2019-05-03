@@ -12,10 +12,6 @@ html, body, hitagi, .sections {
   overflow: hidden;
 }
 
-hitagi {
-  background: #81D3DC;
-}
-
 a {
   text-decoration: none;
 }
@@ -259,6 +255,17 @@ hitagi {
   margin: 1em auto 1em;
 }
 
+#iframe {
+  width: 100%;
+  height: calc(100% - 50px);
+  margin: 50px 0;
+  padding: 0;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 @media only screen and (min-width:440px) {
   .sections[nav-id=friends] {
     padding: 10em 10%;
@@ -306,7 +313,7 @@ hitagi {
 }
 
 #nya-home {
-  background: #81D3DC;
+  background: rgba(53, 53, 53, 1);
 }
 
 #nya-about #nav a, #nya-about-nya #nav a, #nya-friends #nav a {
