@@ -1,0 +1,438 @@
+﻿<html>
+<head>
+<meta charset="utf-8" />
+<title>风铃-晴天娃娃</title>
+<style>
+html,body{
+width:100%;
+height:100%;
+margin:0px;
+padding:0px;
+overflow:hidden;
+}
+#div1{
+width:100%;
+height:100%;
+background:#5df;
+}#div1-b1,#div1-b2,#div1-b3{
+width:40%;
+height:20%;
+margin-left:30%;
+text-align:center;
+background:yellow;
+color:#0e0;
+word-wrap:break-word;
+box-shadow:0px 0px 20px #000;
+position:relative;
+}#div1-b2:hover{
+z-index:2;
+}#div1-b1{
+color:black;
+font-size:1.5em;
+z-index:1;
+}#div1-b2-d1{
+width:100%;
+height:100%;
+position:static;
+}#div1-b2-d2{
+position:absolute;
+top:50%;
+width:100%;
+line-height:20px;
+font-size:20px;
+margin-top:-10px;
+}#div1-b3-d1{
+width:100%;
+height:100%;
+position:static;
+}#div1-b3-d2{
+position:absolute;
+width:100%;
+height:20px;
+line-height:20px;
+font-size:20px;
+top:50%;
+margin-top:-10px;
+}
+#div2{
+display:none;
+overflow:hidden;
+width:100%;
+height:100%;
+margin:0px;
+padding:0px;
+background:#6cf;
+position:static;
+}#div2-dot{
+z-index:2;
+width:30px;
+height:30px;
+position:absolute;
+border-radius:15px;
+background:yellow;
+box-shadow:0px 0px 5px #000;
+}#div2-cover{
+animation:backrot 5s linear infinite;
+-moz-animation:backrot 5s linear infinite;
+-webkit-animation:backrot 5s linear infinite;
+-o-animation:backrot 5s linear infinite;
+}#win-p,#lose-p{
+z-index:3;
+position:fixed;
+width:100%;
+height:100%;
+top:0px;
+left:0px;
+margin:0px;
+padding:0px;
+opacity:0.8;
+display:none;
+}#win-p{
+background:green;
+color:red;
+}#lose-p{
+background:red;
+color:green;
+}#win-p-t,#lose-p-t{
+position:fixed;
+opacity:1.0;
+background:yellow;
+width:100%;
+height:100px;
+line-height:100px;
+font-size:100px;
+top:50%;
+left:0px;
+margin-top:-50px;
+text-align:center;
+}#lose-p-t{
+background:white;
+box-shadow:0px 0px 20px #000;
+}.restart,.buttonb{
+text-align:center;
+border-radius:10px;
+width:200px;
+background:crimson;
+color:thistle;
+height:40px;
+line-height:30px;
+font-size:30px;
+box-shadow:0px 0px 5px #000 inset;
+}.restart{
+position:fixed;
+left:50%;
+top:50%;
+margin-top:100px;
+margin-left:-200px;
+width:400px;
+height:50px;
+line-height:50px;
+font-size:50px;
+}#div2-dot:hover{
+cursor:crosshair;
+}.restart:hover,#div1-b3:hover,#div1-b2:hover,.buttonb:hover{
+cursor:pointer;
+}
+#div3{
+display:none;
+position:fixed;
+left:50%;
+background:#ccc;
+width:450px;
+padding:0px 25px 0px 25px;
+margin-left:-250px;
+font-size:1em;
+color:#000;
+height:100%;
+box-shadow:0px 0px 5px #000 inset;
+word-wrap:break-word;
+overflow-y:auto;
+}
+
+@keyframes backrot{
+0%{transform:rotate(0deg);transform-origin:center center;
+}50%{transform:rotate(180deg);transform-origin:center center;
+}100%{transform:rotate(360deg);transform-origin:center center;
+}
+}
+@-moz-keyframes backrot{
+0%{-moz-transform:rotate(0deg);-moz-transform-origin:center center;
+}50%{-moz-transform:rotate(180deg);-moz-transform-origin:center center;
+}100%{-moz-transform:rotate(360deg);-moz-transform-origin:center center;
+}
+}
+@-webkit-keyframes backrot{
+0%{-webkit-transform:rotate(0deg);-webkit-transform-origin:center center;
+}50%{-webkit-transform:rotate(180deg);-webkit-transform-origin:center center;
+}100%{-webkit-transform:rotate(360deg);-webkit-transform-origin:center center;
+}
+}
+@-o-keyframes backrot{
+0%{-o-transform:rotate(0deg);-o-transform-origin:center center;
+}50%{-o-transform:rotate(180deg);-o-transform-origin:center center;
+}100%{-o-transform:rotate(360deg);-o-transform-origin:center center;
+}
+}
+</style>
+<script>
+var w,h,R;
+var la,lal;
+var d2t;
+var d2t_x,d2t_y;
+var eve;//1:移动圈圈,2:已释放
+var rearX,rearY;//释放坐标
+var t;//定时器
+var p=0;//帧数计数器，单帧100毫秒
+var fps=26;//帧率，p/s
+var v;//弹射速度，像素/每秒
+var xlx,xly,xy2,shootr,lianda;
+//由于火狐的getTime()似乎是一次性的，所以使用两个计时器
+var d1;//计时器一
+var timed1=0;
+var d2;//计时器二
+var timed2=0;
+var detalime;//detal time
+var deged=0;//终角余弦值
+var dege=0;//终角
+var degree;//胜1负0
+window.onload=function(){
+  w=window.innerWidth;
+  h=window.innerHeight;
+  if(w>h){R=h;}else{R=w}
+  
+  var div2cover=document.getElementById("div2-cover");
+  div2cover.style.marginLeft=(w-R)/2;
+  div2cover.style.marginRight=(w-R)/2;
+  
+  la=document.getElementById("lal");
+  lal=la.getContext("2d");
+  
+  la.width=R;
+  la.height=R;
+  
+  rotated(0);
+  
+  d2t=document.getElementById("div2-dot");
+  d2t_x=w/2-15;
+  d2t_y=R/2-15;
+  setDot(d2t_x,d2t_y);
+  
+  v=R*108/160;
+}
+function setDot(x,y)
+{
+  d2t.style.left=x;
+  d2t.style.top=y;
+  
+}
+function rotated(a)
+{
+  lal.beginPath();
+  lal.fillStyle="#000";
+  lal.arc(R/2,R/2,R/2,0,Math.PI*2,true);
+  lal.fill();
+  lal.stroke();
+  lal.closePath();
+  
+  lal.beginPath();
+  lal.fillStyle="#6CF";
+  lal.arc(R/2,R/2,R/32*13,0,Math.PI*2,false);
+  lal.fill();
+  lal.stroke();
+  lal.closePath();
+  
+  lal.beginPath();
+  lal.fillStyle="#6CF";
+  lal.strokeStyle="#6cf";
+  lal.translate(R,R/2);
+  lal.moveTo(-R/2,0);
+  lal.arc(-R/2,0,R/2+3,a,a+Math.PI/6,false);
+  lal.lineTo(-R/2,0)
+  lal.fill();
+  lal.stroke();
+  lal.closePath();
+
+}
+function start()
+{
+  eve=0;
+  p=0;
+  document.getElementById("div1").style.display="none";
+  document.getElementById("div2").style.display="none";
+  document.getElementById("win-p").style.display="none";
+  document.getElementById("lose-p").style.display="none";
+  document.getElementById("div2").style.display="block";
+  
+  d2t_x=w/2-15;
+  d2t_y=R/2-15;
+  setDot(d2t_x,d2t_y);
+}
+function dot_dbc()
+{
+ eve=1;
+}
+function dot_tuo(event)
+{
+  if(eve==1){setDot(event.clientX-15,event.clientY-15);}
+  document.getElementById("bar").innerHTML=(event.clientX)+","+(event.clientY);
+}
+function dot_cadbc(event)
+{
+  if(eve==1){
+	
+	eve=2;
+	
+	rearX=event.clientX;
+	rearY=event.clientY;
+	xlx=w/2-rearX;//发射向量x
+    xly=R/2-rearY;//发射向量y
+	if(xlx==0&&xly==0)
+	{
+	  eve=0;
+	}
+	else{
+	if(xlx==0||xly==0)
+	{
+	if(xlx==0){
+	  if(0-xly>0){
+	    dege=Math.PI/2*3;
+	  }
+	  if(0-xly<0)
+	  {
+	    dege=Math.PI/2;
+	  }
+	}
+	if(xly==0)
+	{
+	  if(xlx>0)
+	  {
+	    dege=0;
+	  }
+	  if(xlx<0)
+	  {
+	    dege=Math.PI;
+	  }
+	}
+	}else{
+	  var _l=R/2/Math.sqrt(xlx*xlx+xly*xly);
+	  var _x=_l*xlx;
+	  var _y=_l*xly;
+	  deged=_x*2/R;
+	  if(-xly>0)
+	  {
+	    dege=Math.PI*2-Math.acos(deged);
+	  }else{
+	    dege=Math.acos(deged);
+	  }
+	}
+	}
+	
+    d2=new Date();
+    timed2=Number(d2.getTime());
+	detalime=timed2-timed1;
+	setTimeout("yark()",1000/fps);
+  }
+}
+function yark()//计算模型
+{
+if(p<(R/2+15)/v*fps)
+{
+  p++;
+
+  shootr=v*p/fps;
+  xy2=Math.sqrt(xlx*xlx+xly*xly);
+  
+  if(xy2!=0){
+    lianda=shootr/xy2;
+	setDot((xlx*lianda+w/2-15),(xly*lianda+R/2-15));
+	document.getElementById("bar2").innerHTML=timed1+","+timed2+","+detalime;
+  } 
+  setTimeout("yark()",1000/fps);
+}else{
+  //结算
+  var lessed=(detalime+R/2/v*1000)%5000/2500*Math.PI;
+  var biggested=lessed+Math.PI/6;
+  document.getElementById("bar2").innerHTML=lessed+","+dege+","+biggested;
+  if(dege>=lessed&&dege<=biggested){
+    degree=1;
+	document.getElementById("win-p").style.display="block";
+  }else{
+    degree=0;
+	document.getElementById("lose-p").style.display="block";
+  }
+}
+}
+function get3()
+{
+document.getElementById('div1').style.display='none';
+document.getElementById('div3').style.display='block';
+}
+function get1()
+{
+document.getElementById('div3').style.display='none';
+document.getElementById('div1').style.display='block';
+}
+</script>
+</head>
+<body onmousemove=dot_tuo(event)>
+<div id="div1" style="">
+  <div id="div1-b1" style="">MRXL-OL-0.1</div>
+  <div id="div1-b2" style="" onclick="d1=new Date();timed1=Number(d1.getTime());start();">
+    <div id="div1-b2-d1" style="">
+      <div id="div1-b2-d2" style="">start</div>
+    </div>
+  </div>
+  <div id="div1-b3" onclick="get3()">
+    <div id="div1-b3-d1" style="">
+      <div id="div1-b3-d2"style="">h<span style="color:red;">e</span>lp</div>
+	</div>
+  </div>
+</div>
+<div id="div2">
+  <div id="div2-dot" ondblclick=dot_dbc() onclick=dot_cadbc(event)>
+  </div>
+  <div id="div2-cover">
+  <canvas id="lal">
+  </canvas>
+  </div>
+  <div id="win-p">
+    <div id="win-p-t">
+	WIN!!!
+	</div>
+	<div class="restart" onclick="start()">
+	Restart
+	</div>
+  </div>
+  <div id="lose-p">
+    <div id="lose-p-t">
+	加油！
+	</div>
+	<div class="restart" onclick="start()">
+	Restart
+	</div>
+  </div>
+</div>
+<div id="div3">
+<br>
+<br>
+<div class="buttonb" onclick="get1()">Home</div>
+<h2>
+这是帮助文档
+</h2>
+<br>
+1。这是一个简易的弹球游戏，目的是让弹球从缺口离开。游戏方式，双击小球即可拾取，而后单击释放。<br>
+2。推荐平台：桌面火狐。<br>
+3。本版本移植重制于baitieyi早年计划mrxl，事实上移动版本尚在动工。<br>
+4。如想关注其他内容，可电邮baitieyi@163.com(并不觉得= =...真是有点多余。<br>
+5。关于right：保留版权，CC协议，对不对我才不管，懒得研究那些协议。<br>
+<br>
+<div style="width:450px;text-align:center;font-weight:100;">
+copyright(c)Beat'i_White@voidarts.org
+<br>
+baitieyi@163.com
+</div>
+</div>
+<div style="width:300px;height:50px;position:fixed;top:0px;left:0px;" id="bar"></div>
+<div style="width:300px;height:50px;position:fixed;top:50px;left:0px;" id="bar2"></div>
+</body>
+</html>
