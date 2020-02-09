@@ -1,13 +1,3 @@
-var helloworld=function(){
-  var code
-    =document
-      .querySelector
-        ("#code");/*hello world*/
-      code.innerHTML
-    =helloworld
-  .toString();
-};
-// helloworld();
 (function(nya_global){
   var nya=function(nya_name){
     return Array.prototype.slice.call(document.querySelectorAll(nya_name));
