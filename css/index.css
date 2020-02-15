@@ -55,7 +55,7 @@ hitagi {
   height: 100%;
 }
 
-/*vav-id=home*/
+/* vav-id=home */
 
 .sections[nav-id=home] {}
 
@@ -103,7 +103,7 @@ hitagi {
   white-space: pre !important;
 }
 
-/*nav-id=about*/
+/* nav-id=about */
 
 .sections[nav-id=about] {
   position: absolute;
@@ -124,7 +124,7 @@ hitagi {
 }
 
 .san .jou {
-  /*order: <integer>*/
+  /* order: <integer> */
   flex-grow: 0;
   flex-shrink: 1;
   flex-basis: auto;
@@ -192,14 +192,14 @@ hitagi {
   color: #81D3DC;
 }
 
-/*nav-id=about-nya*/
+/* nav-id=about-nya */
 
 .sections[nav-id=about-nya] {
   position: absolute;
   top: 100%;
 }
 
-/*friends*/
+/* friends */
 
 .sections[nav-id=friends] {
   position: absolute;
@@ -255,6 +255,18 @@ hitagi {
   margin: 1em auto 1em;
 }
 
+/* comments */
+.sections[nav-id=comments] {
+  position: absolute;
+  left: 300%;
+  padding: 8em 0;
+}
+
+#vcomments {
+  max-width: 800px !important;
+  margin: 0 auto;
+}
+
 #iframe {
   width: 100%;
   height: calc(100% - 50px);
@@ -302,7 +314,11 @@ hitagi {
   }
 }
 
-/*nav*/
+/* nav */
+
+#nya-comments>hitagi {
+  transform: translate3d(-300%, 0, 0);
+}
 
 #nya-about>hitagi, #nya-about-nya>hitagi {
   transform: translate3d(-200%, 0, 0);
@@ -316,7 +332,10 @@ hitagi {
   background: rgba(53, 53, 53, 1);
 }
 
-#nya-about #nav a, #nya-about-nya #nav a, #nya-friends #nav a {
+#nya-about #nav a,
+#nya-about-nya #nav a,
+#nya-friends #nav a,
+#nya-comments #nav a {
   color: #333;
 }
 
@@ -328,7 +347,12 @@ hitagi {
   background: #fff;
 }
 
-#nya-friends .sections[nav-id=friends] {
+#nya-comments {
+  background: #fff;
+}
+
+#nya-friends .sections[nav-id=friends],
+#nya-comments .sections[nav-id=comments] {
   overflow: auto;
 }
 

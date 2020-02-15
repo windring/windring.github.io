@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>[assorted]起风了，唯有努力生存[last:20200209]</title>
+  <title>[assorted]起风了，唯有努力生存[last:20200215]</title>
   <link href="css/index.css" rel="stylesheet">
   <link href="css/github.css" rel="stylesheet">
   <link href="css/page.css" rel="stylesheet">
@@ -12,10 +12,11 @@
 </head>
 <body>
   <nav id="nav">
-    <a href="#!/home"><i class="fa fa-snowflake-o" aria-hidden="true"></i>|Home</a>
-    <a target="_blank" href="//blog.assorted.ink/"><i class="fa fa-file" aria-hidden="true"></i>|Blog</a>
-    <a href="#!/friends"><i class="fa fa-heart-o" aria-hidden="true"></i></i>|Friends</a>
-    <a href="#!/about"><i class="fa fa-anchor" aria-hidden="true"></i>|About</a>
+    <a href="#!/home"><i class="fa fa-snowflake-o" aria-hidden="true"></i> Home</a>
+    <a target="_blank" href="//blog.assorted.ink/"><i class="fa fa-file" aria-hidden="true"></i> Blog</a>
+    <a href="#!/friends"><i class="fa fa-heart" aria-hidden="true"></i></i> Friends</a>
+    <a href="#!/about"><i class="fa fa-anchor" aria-hidden="true"></i> About</a>
+    <a href="#!/comments"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a>
   </nav>
   <hitagi>
     <section class="sections" nya-id="cell" nav-id="home">
@@ -23,7 +24,7 @@
         <iframe id="iframe" src="https://player.bilibili.com/player.html?aid=84781205&cid=144986311&page=1&wmode=transparent" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
       </div>
     </section>
-    <section class="sections" nav-id="friends" nay-id="flex">
+    <section class="sections" nay-id="flex" nav-id="friends">
       <div class="hara">
         <a target="_blank" href="https://hane.ink/">
           <img class="img" src="./img/yuki.png">
@@ -110,12 +111,28 @@
         </div>
       </div>
     </section>
+    <section class="sections" nav-id="comments">
+      <div id="vcomments"></div>
+      </div>
+    </section>
   </hitagi>
   <script src="js/highlight.site.pack.js"></script>
   <script src="js/showdown.min.js"></script>
   <script src="js/scrollreveal.min.js"></script>
   <script src="js/index.js"></script>
   <script src="js/text.js"></script>
+  <script src="js/Valine.min.js"></script>
   <script>hljs.initHighlightingOnLoad();(ScrollReveal()).reveal('sections');</script>
+  <script>
+    new Valine({
+      el: '#vcomments' ,
+      appId: 'UFnbD15mQN4tKXtPyNhHPyL9-gzGzoHsz',
+      appKey: 'DdgbPYg3Dsnb6NzHQEpupinl',
+      notify:false,
+      verify:false,
+      avatar:'mp',
+      placeholder: 'seven days'
+    });
+  </script>
 </body>
 </html>
