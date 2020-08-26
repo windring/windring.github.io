@@ -1,15 +1,29 @@
-html, body, hitagi, .sections {
+html, body, .hitagi, .sections {
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  height: auto;
   border: 0;
   color: #333;
   font-size: 18px !important;
-  position: absolute;
+  position: relative;
   transition: 1000ms cubic-bezier(.72, 0, .23, 1.41);
   font-family: proxima-nova, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  overflow-x: hidden;
+}
+
+.hitagi {
+  width: 400%;
+}
+
+.sections {
+  min-height: unset;
+  background: none;
+  height: 100vh;
+  top: 0;
   overflow: hidden;
+  float: left;
+  width: 25%;
 }
 
 a {
@@ -21,10 +35,10 @@ a {
 }
 
 #nav {
-  position: fixed;
+  position: fixed !important; /* cover page.css */
   left: 0;
-  top: 0;
-  width: 100%;
+  top: 0 !important; /* cover page.css */
+  width: 100vw;
   line-height: 2em;
   padding: .5em 0 0 1em;
   z-index: 141;
@@ -40,24 +54,14 @@ a {
   font-weight: 500;
 }
 
-hitagi {
-  overflow: visible;
+.hitagi {
   transition: .64s cubic-bezier(.72, 0, .23, 1.41);
 }
 
-.sections {
-  background: none;
+/* nav-id=home */
+
+.sections[nav-id=home] {
 }
-
-.sections[nya-id=cell] {
-  display: table;
-  width: 100%;
-  height: 100%;
-}
-
-/* vav-id=home */
-
-.sections[nav-id=home] {}
 
 #gomoku {
   background: url("../img/gomoku.png") no-repeat center;
@@ -106,20 +110,17 @@ hitagi {
 /* nav-id=about */
 
 .sections[nav-id=about] {
-  position: absolute;
-  left: 200%;
-  overflow-y: hidden;
 }
 
-.sections div.san {
-  height: 100%;
-  width: 100%;
+.san {
+  min-height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  overflow: auto;
+  overflow-y: visible;
   transition: 1s cubic-bezier(.72, 0, .23, 1.41);
 }
 
@@ -192,20 +193,9 @@ hitagi {
   color: #81D3DC;
 }
 
-/* nav-id=about-nya */
-
-.sections[nav-id=about-nya] {
-  position: absolute;
-  top: 100%;
-}
-
 /* friends */
 
 .sections[nav-id=friends] {
-  position: absolute;
-  left: 100%;
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -213,7 +203,6 @@ hitagi {
   align-items: center;
   align-content: flex-start;
   padding: 6em 1px;
-  overflow: hidden;
 }
 
 .hara {
@@ -222,7 +211,7 @@ hitagi {
   position: relative;
   margin: 1em;
   margin-top: 16px;
-  width: 100%;
+  width: 100vw;
   height: auto;
 }
 
@@ -256,9 +245,8 @@ hitagi {
 }
 
 /* comments */
+
 .sections[nav-id=comments] {
-  position: absolute;
-  left: 300%;
   padding: 8em 0;
 }
 
@@ -269,7 +257,7 @@ hitagi {
 
 #iframe {
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100vh - 50px);
   margin: 50px 0;
   padding: 0;
   border: none;
@@ -280,7 +268,7 @@ hitagi {
 
 @media only screen and (min-width:440px) {
   .sections[nav-id=friends] {
-    padding: 10em 10%;
+    padding: 10em 10vw;
   }
   .hara {
     width: 220px;
@@ -298,7 +286,7 @@ hitagi {
 
 @media only screen and (min-width:1024px) {
   .sections[nav-id=friends] {
-    padding: 15% 15%;
+    padding: 15vh 15vw;
   }
   .hara {
     width: 152px;
@@ -315,17 +303,34 @@ hitagi {
 }
 
 /* nav */
+/* nya-home
+ * nya-friends
+ * nya-about
+ * nya-comments */
 
-#nya-comments>hitagi {
-  transform: translate3d(-300%, 0, 0);
+#nya-home .sections[nav-id=home] {
+  height: 100vh;
 }
 
-#nya-about>hitagi, #nya-about-nya>hitagi {
-  transform: translate3d(-200%, 0, 0);
+#nya-about .sections[nav-id=about] {
+  overflow-y: visible !important;
+  height: unset;
 }
 
-#nya-friends>hitagi {
-  transform: translate3d(-100%, 0, 0);
+#nya-friends .sections[nav-id=friends] {
+  height: auto;
+}
+
+#nya-comments .hitagi {
+  transform: translate3d(-75%, 0, 0);
+}
+
+#nya-about .hitagi {
+  transform: translate3d(-50%, 0, 0);
+}
+
+#nya-friends .hitagi {
+  transform: translate3d(-25%, 0, 0);
 }
 
 #nya-home {
@@ -333,13 +338,15 @@ hitagi {
 }
 
 #nya-about #nav a,
-#nya-about-nya #nav a,
 #nya-friends #nav a,
-#nya-comments #nav a {
+#nya-comments #nav a,
+#nya-about .copyright,
+#nya-friends .copyright,
+#nya-comments .copyright {
   color: #333;
 }
 
-#nya-about-nya, #nya-about {
+#nya-about {
   background: #f1f1f1;
 }
 
@@ -351,16 +358,15 @@ hitagi {
   background: #fff;
 }
 
-#nya-friends .sections[nav-id=friends],
-#nya-comments .sections[nav-id=comments] {
-  overflow: auto;
-}
+/* footer */
 
-#nya-about-nya #about {
-  top: 0;
+.copyright {
+  padding: 1em 2em;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  width: 100vw;
 }
-
-#nya-about-nya #assorted {
-  opacity: 0;
-  z-index: -1;
+.copyright a {
+  color: #00a1d6;
 }

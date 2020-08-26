@@ -1,7 +1,6 @@
-document.querySelector("#about .jou").innerHTML=((new showdown.Converter()).makeHtml((function(nya_markdown){
-  return (nya_markdown.toString().split('\n').slice(1,-1).join('\n'));
-})(function(){/*
-
+document.querySelector("#about .jou").innerHTML = ((new showdown.Converter()).makeHtml((function (nya_markdown) {
+  return (nya_markdown.toString().split('\n').slice(1, -1).join('\n'));
+})(function () {/*
 gomoku
 
 【信息缺失】：alex（已删除），gomoku（assorted，什锦，五目，ごもく），windring（风铃），baitieyi（Beate'i White，白铁翼）。
@@ -76,8 +75,10 @@ last: 20200209
 
 last: 20200215
 
+last: 20200826
+
 ### 将要做
 
-失去了梦想
+学习
 
 */})));

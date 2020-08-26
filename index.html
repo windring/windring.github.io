@@ -18,13 +18,13 @@
     <a href="#!/about"><i class="fa fa-anchor" aria-hidden="true"></i> About</a>
     <a href="#!/comments"><i class="fa fa-comments" aria-hidden="true"></i> Comments</a>
   </nav>
-  <hitagi>
-    <section class="sections" nya-id="cell" nav-id="home">
+  <div class="hitagi">
+    <div class="sections" nav-id="home">
       <div class="cat">
         <iframe id="iframe" src="https://player.bilibili.com/player.html?aid=84781205&cid=144986311&page=1&wmode=transparent" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
       </div>
-    </section>
-    <section class="sections" nay-id="flex" nav-id="friends">
+    </div>
+    <div class="sections" nav-id="friends">
       <div class="hara">
         <a target="_blank" href="https://hane.ink/">
           <img class="img" src="./img/yuki.png">
@@ -89,8 +89,8 @@
           </div>
         </a>
       </div>
-    </section>
-    <section class="sections" nav-id="about">
+    </div>
+    <div class="sections" nav-id="about">
       <div class="san" id="assorted">
         <div class="jou">
           <h3>gomoku</h3>
@@ -104,18 +104,19 @@
             <li><i class="fa">知 什锦</i></li>
           </ul>
         </div>
-        <a href="#!/about-nya" class="down"><i class="fa fa-angle-double-down down" aria-hidden="true"></i></a>
+        <a href="javascript: document.querySelector('#about').scrollIntoView();" class="down"><i class="fa fa-angle-double-down down" aria-hidden="true"></i></a>
       </div>
-      <div class="sections san" nav-id="about-nya" nya-id="about" id="about">
+      <div class="san" id="about">
         <div class="jou content">
         </div>
       </div>
-    </section>
-    <section class="sections" nav-id="comments">
+    </div>
+    <div class="sections" nav-id="comments">
       <div id="vcomments"></div>
-      </div>
-    </section>
-  </hitagi>
+    </div>
+    <div style="clear: both;"></div>
+  </div> <!--class: hitagi-->
+  <div class="copyright">© 2021 assorted.ink 版权所有 ICP证：<a href="http://beian.miit.gov.cn/" target="_blank">津ICP备20005995号-1</a></div>
   <script src="js/highlight.site.pack.js"></script>
   <script src="js/showdown.min.js"></script>
   <script src="js/scrollreveal.min.js"></script>
