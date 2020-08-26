@@ -312,12 +312,9 @@ a {
   height: 100vh;
 }
 
-#nya-about .sections[nav-id=about] {
-  overflow-y: visible !important;
-  height: unset;
-}
-
-#nya-friends .sections[nav-id=friends] {
+#nya-about .sections[nav-id=about],
+#nya-friends .sections[nav-id=friends],
+#nya-comments .sections[nav-id=comments] {
   height: auto;
 }
 
