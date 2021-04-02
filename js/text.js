@@ -6,20 +6,18 @@ gomoku
 【信息缺失】：alex（已删除），gomoku（assorted，什锦，五目，ごもく），windring（风铃），baitieyi（Beate'i White，白铁翼）。
 
 <p class="tip">
-这是一个约定：人只能自己救自己。
+人只能自己救自己。
 </p>
 
 <p class="tip">
-这是另一个约定：【信息缺失】
+人是要互相帮助地活下去的，只有那样，才能活下去。
 </p>
 
 ### About Me
 
-东大陆的一个学生，使用着东八区的时间。
+学生，使用着东八区的时间。
 
 现在喜欢的番剧是```魔法少女小圆```。
-
-【信息删除】
 
 择日更新 assorted 。
 
@@ -37,7 +35,7 @@ gomoku
 
 在以下地方偶尔写写东西：
 
-[blog](http://blog.assorted.pw)
+[blog](http://blog.assorted.ink)
 
 [Koishumi](http://windring.github.io/Koishumi/#!/home)
 
@@ -76,6 +74,8 @@ last: 20200209
 last: 20200215
 
 last: 20200826
+
+last: 20210402
 
 ### 将要做
 
